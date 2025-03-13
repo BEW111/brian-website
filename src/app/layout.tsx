@@ -2,7 +2,6 @@ import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Cormorant } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
 
@@ -62,7 +61,6 @@ export default function RootLayout({
           "dark:bg-slate-900 dark:text-slate-400"
         )}
       >
-        <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
       </body>
     </html>

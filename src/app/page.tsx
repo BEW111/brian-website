@@ -1,6 +1,6 @@
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
-import { Stories } from "@/app/_components/stories";
+import { PostPreviewList } from "@/app/_components/post-preview-list";
 import { getAllPosts } from "@/lib/api";
 
 export default function Index() {
@@ -10,7 +10,7 @@ export default function Index() {
     <main>
       <Container>
         <Intro />
-        <Stories posts={allPosts} />
+        <PostPreviewList posts={allPosts} />
       </Container>
     </main>
   );

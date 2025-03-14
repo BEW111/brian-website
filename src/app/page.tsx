@@ -10,6 +10,9 @@ export default function Index() {
     <main>
       <Container>
         <Intro />
+        <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
+          Thoughts & more
+        </h2>
         <PostPreviewList posts={allPosts} />
       </Container>
     </main>

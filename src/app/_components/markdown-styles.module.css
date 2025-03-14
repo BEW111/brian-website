@@ -9,6 +9,7 @@
 
 .markdown a {
   @apply text-sky-500;
+  @apply font-semibold;
   @apply hover:underline;
 }
 
@@ -22,12 +23,15 @@
 
 .markdown h1 {
   @apply text-4xl mt-12 mb-4 leading-snug;
+  @apply font-medium;
 }
 
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply font-medium;
 }
 
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply font-medium;
 }

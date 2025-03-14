@@ -3,10 +3,20 @@
 }
 
 .markdown p,
-.markdown ul,
-.markdown ol,
 .markdown blockquote {
   @apply my-6;
+}
+
+.markdown ul {
+  @apply list-disc ml-5;
+}
+
+.markdown ol {
+  @apply list-decimal ml-5;
+}
+
+.markdown h1 {
+  @apply text-4xl mt-12 mb-4 leading-snug;
 }
 
 .markdown h2 {

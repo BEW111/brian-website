@@ -48,8 +48,8 @@ export function CircleCursor() {
         top: position.y,
         transform: "translate(-50%, -50%)",
       }}
-      className={`fixed w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference ${
-        isHoveringLink ? "bg-rose-900" : "bg-rose-100"
+      className={`fixed w-6 h-6 rounded-full pointer-events-none z-50 mix-blend-difference ${
+        isHoveringLink ? "bg-sky-900" : "bg-sky-100"
       }`}
     />
   );

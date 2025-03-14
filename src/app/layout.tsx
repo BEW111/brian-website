@@ -55,12 +55,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body
-        className={cn(
-          cormorant.className,
-          "bg-rose-100 dark:bg-slate-900 dark:text-slate-400"
-        )}
-      >
+      <body className={cn(cormorant.className, "bg-sky-100")}>
         <div className="min-h-screen">{children}</div>
         <CircleCursor />
       </body>

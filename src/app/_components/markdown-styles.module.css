@@ -7,6 +7,11 @@
   @apply my-6;
 }
 
+.markdown a {
+  @apply text-sky-500;
+  @apply hover:underline;
+}
+
 .markdown ul {
   @apply list-disc ml-5;
 }

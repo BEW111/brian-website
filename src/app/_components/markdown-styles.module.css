@@ -13,6 +13,10 @@
   @apply hover:underline;
 }
 
+.markdown code {
+  @apply text-sm;
+}
+
 .markdown ul {
   @apply list-disc ml-5;
 }

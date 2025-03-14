@@ -55,13 +55,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body
-        className={cn(
-          cormorant.className,
-          "bg-gradient-to-b from-sky-100 via-zinc-100 to-rose-100"
-        )}
-      >
-        <div className="min-h-screen">{children}</div>
+      <body className={cn(cormorant.className)}>
+        <div className="bg-gradient-to-b from-sky-100 via-zinc-100 to-rose-100">
+          <div className="min-h-screen pb-8">{children}</div>
+        </div>
         <CircleCursor />
       </body>
     </html>

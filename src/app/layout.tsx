@@ -1,8 +1,8 @@
 import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Cormorant } from "next/font/google";
+import { CircleCursor } from "@/app/_components/circle-cursor";
 import cn from "classnames";
-
 import "./globals.css";
 
 const cormorant = Cormorant({ subsets: ["latin"] });
@@ -62,6 +62,7 @@ export default function RootLayout({
         )}
       >
         <div className="min-h-screen">{children}</div>
+        <CircleCursor />
       </body>
     </html>
   );

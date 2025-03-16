@@ -11,3 +11,9 @@
 body {
   background-color: #e0f2fe;
 }
+
+pre code.hljs {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 10px;
+}
+

@@ -13,7 +13,7 @@ export default function Index() {
         <Intro />
         {/* <p>bewilliams111 [at] gmail [dot] com</p>
         <SectionSeparator /> */}
-        <h2 className="mb-4 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
+        <h2 className="mb-4 text-5xl md:text-7xl font-semibold tracking-tighter leading-tight">
           notes & thoughts
         </h2>
         <PostPreviewList posts={allPosts} />

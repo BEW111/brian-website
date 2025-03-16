@@ -5,8 +5,18 @@ import { useState, useEffect } from "react";
 export function CircleCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHoveringLink, setIsHoveringLink] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const mobileQuery = window.matchMedia(
+      "(hover: none) and (pointer: coarse)"
+    );
+    setIsMobile(mobileQuery.matches);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     const moveCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -39,7 +49,9 @@ export function CircleCursor() {
       window.removeEventListener("mouseout", handleMouseOut);
       window.removeEventListener("click", handleMouseClick);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <div

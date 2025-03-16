@@ -13,7 +13,12 @@ body {
 }
 
 pre code.hljs {
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
   border-radius: 10px;
 }
 
+pre code.language-python-repl {
+  background-color: rgba(60, 60, 60, 0.9) !important;
+  border-radius: 10px;
+  padding: 1em;
+}

@@ -12,13 +12,23 @@ body {
   background-color: #e0f2fe;
 }
 
-pre code.hljs {
+.blog-post pre code.hljs {
   background-color: rgba(0, 0, 0, 0.9) !important;
   border-radius: 10px;
 }
 
-pre code.language-python-repl {
+.blog-post pre code.language-python-repl {
   background-color: rgba(60, 60, 60, 0.9) !important;
   border-radius: 10px;
-  padding: 1em;
+}
+
+.blog-post img {
+  border-radius: 10px;
+  border: 0.5px solid #000;
+}
+
+.blog-post img + em {
+  font-size: 0.8em;
+  color: #64748b;
+  text-align: center;
 }

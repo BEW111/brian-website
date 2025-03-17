@@ -14,16 +14,16 @@ body {
 
 .blog-post pre code.hljs {
   background-color: rgba(0, 0, 0, 0.9) !important;
-  border-radius: 10px;
+  border-radius: 0.8em;
 }
 
 .blog-post pre code.language-python-repl {
   background-color: rgba(60, 60, 60, 0.9) !important;
-  border-radius: 10px;
+  border-radius: 0.8em;
 }
 
 .blog-post img {
-  border-radius: 10px;
+  border-radius: 0.8em;
   border: 0.5px solid #000;
 }
 
@@ -31,4 +31,9 @@ body {
   font-size: 0.8em;
   color: #64748b;
   text-align: center;
+}
+
+.katex, 
+.katex-display {
+  font-size: 1em !important;
 }

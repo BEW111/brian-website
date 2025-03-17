@@ -531,7 +531,7 @@ Here are the important _new_ hyperparams[^new_params] that we discussed above:
 
 For specific tips on how to tune these, I recommend looking at Appendix D.2 of the [ReFT paper](https://arxiv.org/pdf/2404.03592).
 
-<!-- TODO: # ReFT-r1 -->
+<!-- TODO: # section on ReFT-r1 -->
 
 # What's next?
 

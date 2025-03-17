@@ -11,7 +11,7 @@ I've been investigating which fine-tuning methods are best for mitigating [forge
 
 [ReFT: Representation Finetuning for Language Models](https://arxiv.org/pdf/2404.03592) was written in May 2024 and accepted as a spotlight paper at NeurIPS later that year. The authors also released an [accompanying library](https://github.com/stanfordnlp/pyreft).
 
-I recommend reading the paper, but I thought it'd be helpful to add my own notes on ReFT—how it works, where it comes from, and how you can use it. I'm assuming you know the basic Transformer architecture, and familarity with other fine-tuning techniques like [LoRA](https://arxiv.org/pdf/2106.09685) is helpful but not necessary.
+I recommend reading the paper, but I thought it'd be helpful to add my own notes on ReFT—how it works, where it comes from, and how you can use it. I'm assuming you know the basic Transformer architecture, and familiarity with other fine-tuning techniques like [LoRA](https://arxiv.org/pdf/2106.09685) is helpful but not necessary.
 
 # Representations over weights
 
@@ -42,7 +42,7 @@ Let me (informally) break down what makes ReFT different:
 - When we modify _weights_, we modify the ways in which the model is doing computations
 - When we modify _representations_, we modify the actual intermediate results of computations
 
-Models might not just use a single neuron to encode a concept. And neurons themselves might encode [multiple concepts](https://distill.pub/2020/circuits/zoom-in/). If we focus on how we can modify representations, which encode concepts more naturally than the neuron values themselves, we might be able to fine-tune more effectively.
+Models might not just use a single neuron to encode a concept. A single neuron might encode [multiple concepts](https://distill.pub/2020/circuits/zoom-in/). If we focus on how we can modify representations, which encode concepts more naturally than the neuron values themselves, we might be able to fine-tune more effectively.
 
 ## The recipe
 

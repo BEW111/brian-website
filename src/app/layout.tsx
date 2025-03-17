@@ -1,4 +1,3 @@
-import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Cormorant } from "next/font/google";
 import { CircleCursor } from "@/app/_components/circle-cursor";
@@ -10,9 +9,6 @@ const cormorant = Cormorant({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: `Brian Williams`,
   description: `Brian's Personal Website`,
-  openGraph: {
-    images: [HOME_OG_IMAGE_URL],
-  },
 };
 
 export default function RootLayout({

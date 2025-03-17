@@ -204,11 +204,25 @@ $$
 \mathbf{h} + \mathbf{R}^\intercal(\mathbf{Rs} - \mathbf{Rh})
 $$
 
-and when we try this on our example above, we find that the mapping works.[^dii_detail]
+and when we try this on our example above, with a rotation of 20 degrees, we find that the mapping works.[^dii_detail]
 
 [^dii_detail]: In [the DII paper](https://arxiv.org/pdf/2303.02536), the complete definition of a DII is a bit more nuanced. We actually take the vector space we rotate into and decompose it into parts, so that we can intervene with multiple source inputs for all but one subspace (which keeps a base input). See Definition 3 in the paper for more detail.
 
 This is called _distributed_ interchange intervention because we're now working in a rotated space across multiple, distributed neurons. As mentioned before, individual neurons might play multiple roles in representing multiple concepts, so rotating the neuron space helps us find that natural setting.
+
+In most examples, we won't know what $\mathbf{R}$ should be ahead of time, so we do the following:
+
+- Constrain $\mathbf{R}$ to have orthonormal rows.
+- Learn $\mathbf{R}$ using gradient descent, based on how well the mapping matches up.[^dii_detail_2]
+
+[^dii_detail_2]: This is another detail we're glossing over a bit—we need an actual loss function if we want to do gradient descent. We can handle this by assuming that the neural network and causal model now output _distributions_ over values, and not just single discrete values. Then we can make a differentiable loss function based on how similar those distributions are.
+
+So we can use the same recipe as in the previous section to find a causal mapping, except:
+
+- We use normal interchange interventions on the causal model.
+- We use _distributed_ interchange interventions on the neural network, with gradient descent to learn $\mathbf{R}$.
+
+This process is called _distributed alignment search_. One advantage of using gradient descent and a distributed intervention here is that we are no longer using pure brute-force search to find a mapping.
 
 # From DIIs to ReFT
 

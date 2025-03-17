@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   * {
     @apply cursor-none;
   }
-}
+} */
 
 body {
   background-color: #e0f2fe;

@@ -52,10 +52,10 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={cn(cormorant.className)}>
-        <div className="bg-gradient-to-b from-sky-100 via-zinc-100 to-rose-100">
+        <div className="w-full bg-gradient-to-b from-sky-100 via-zinc-100 to-rose-100">
           <div className="min-h-screen pb-8">{children}</div>
         </div>
-        <CircleCursor />
+        {/* <CircleCursor /> */}
       </body>
     </html>
   );

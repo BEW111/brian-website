@@ -37,3 +37,7 @@ body {
 .katex-display {
   font-size: 1em !important;
 }
+
+sup a[data-footnote-ref] {
+  font-size: 1.3em;
+}
